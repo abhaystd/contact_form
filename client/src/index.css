@@ -1,32 +1,32 @@
 /* General body styling */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif; /* Custom font */
+  background-color: #f0f4f8; /* Background color */
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Adjust height for mobile view */
+  min-height: 100vh;
 }
 
 /* Contact Form container */
 .contact-form {
-  background: white;
+  background: #ffffff;
   padding: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for form container */
+  border-radius: 10px; /* Rounded corners */
   width: 100%;
-  max-width: 500px;
-  text-align: center;
-  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  max-width: 600px;
+  border: 1px solid #e0e0e0; /* Light border */
 }
 
 /* Form heading */
 .contact-form h2 {
   margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
+  font-size: 32px; /* Font size */
+  color: #333333; /* Font color */
+  font-family: 'Georgia', serif; /* Custom font for heading */
 }
 
 /* Form input fields */
@@ -35,87 +35,97 @@ body {
   width: 100%;
   padding: 15px;
   margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+  border: 2px solid #cccccc; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 18px; /* Font size */
+  color: #333333; /* Font color */
   box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for input fields */
+}
+
+/* Focus state for inputs */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff; /* Focus border color */
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* Shadow on focus */
 }
 
 /* Button styling */
 .contact-form button {
   width: 100%;
-  padding: 15px;
-  background-color: #007bff;
+  padding: 14px;
+  background-color: #28a745; /* Green button background color */
   border: none;
-  color: white;
-  border-radius: 5px;
-  font-size: 16px;
+  color: #ffffff; /* Button text color */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 18px; /* Font size */
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for button */
 }
 
 .contact-form button:hover {
-  background-color: #0056b3;
+  background-color: #218838; /* Darker green on hover */
 }
 
 /* Response message styling */
 .contact-form p {
   margin-top: 15px;
-  color: #28a745;
-  font-size: 18px;
+  font-size: 18px; /* Font size for messages */
+}
+
+/* Success message styling */
+.contact-form p.success {
+  color: #28a745; /* Success message color */
 }
 
 /* Error message styling */
 .contact-form p.error {
-  color: #dc3545;
+  color: #dc3545; /* Error message color */
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .contact-form {
     padding: 20px;
-    max-width: 90%; /* Reduce max width for smaller screens */
+    max-width: 90%;
   }
 
   .contact-form h2 {
-    font-size: 20px; /* Adjust font size for smaller screens */
+    font-size: 28px;
   }
 
   .contact-form input,
   .contact-form textarea {
-    padding: 10px; /* Decrease padding for smaller screens */
-    font-size: 14px;
+    padding: 12px;
+    font-size: 16px;
   }
 
   .contact-form button {
-    padding: 10px; /* Adjust button size for smaller screens */
-    font-size: 14px;
+    padding: 12px;
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  body {
-    align-items: flex-start; /* Align form to the top on very small screens */
-    padding: 20px;
-  }
-
   .contact-form {
     padding: 15px;
-    max-width: 100%; /* Full width for very small screens */
+    max-width: 100%;
   }
 
   .contact-form h2 {
-    font-size: 18px;
+    font-size: 24px;
   }
 
   .contact-form input,
   .contact-form textarea {
-    padding: 8px;
-    font-size: 12px;
+    padding: 10px;
+    font-size: 14px;
   }
 
   .contact-form button {
     padding: 10px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
